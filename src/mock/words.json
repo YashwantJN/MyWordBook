@@ -1,0 +1,52 @@
+[
+    {
+      "word": "Algorithm",
+      "definition": "A step-by-step procedure for solving a problem or accomplishing a task.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Array",
+      "definition": "A data structure that contains a group of elements. Typically these elements are all of the same data type, such as an integer or string.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Bug",
+      "definition": "An error, flaw or fault in a computer program that causes it to produce an incorrect or unexpected result, or to behave in unintended ways.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Compiler",
+      "definition": " A software that translates computer code written in one programming language (the source language) into another language (the target language).",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Database",
+      "definition": "An organized collection of data, generally stored and accessed electronically from a computer system.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Function",
+      "definition": "A block of organized, reusable code that is used to perform a single, related action.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Loop",
+      "definition": "A programming construct that repeats a group of commands.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Object",
+      "definition": " In object-oriented programming, it is an instance of a class. It has both data and functions.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "Variable",
+      "definition": "A storage location paired with an associated symbolic name, which contains some known or unknown quantity of information referred to as a value.",
+      "pronunciation": "Eksaktor"
+    },
+    {
+      "word": "API",
+      "definition": "A set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it.",
+      "pronunciation": "Eksaktor"
+    }
+  ]
