@@ -1,11 +1,10 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView, FlatList} from 'react-native';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
 import words from '../../mock/words.json';
-import PrimaryButton from '../../components/button/PrimaryButton';
 import {Colors} from '../../constants/Colors.constant';
 import NavigationItem from '../../components/items/NavigationItem';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({navigation}: {navigation: any}) => {
   // https://random-words-api.vercel.app/word
 
   const navigateToInfo = (wordData: any) => {
@@ -19,8 +18,8 @@ const HomeScreen = ({navigation}) => {
 
   const footerComponent = (): JSX.Element => {
     return (
-      <View style={{marginBottom: 50, padding: 16}}>
-        <Text style={{textAlign: 'center'}}>You reached the end</Text>
+      <View style={styles.footerView}>
+        <Text style={styles.footerText}>You reached the end</Text>
       </View>
     );
   };
@@ -67,4 +66,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     letterSpacing: 1,
   },
+  footerView: {marginBottom: 50, padding: 16},
+  footerText: {textAlign: 'center'},
 });

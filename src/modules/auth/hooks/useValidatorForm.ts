@@ -1,30 +1,31 @@
-import { useState, useEffect } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import {useState, useEffect} from 'react';
 
 const useValidatorForm = (validationSuccessfull: any, validate: any): any => {
   const [values, setValues] = useState({
     email: '',
     password: '',
-  })
+  });
 
   const [errors, setErrors] = useState({
     email: '',
     password: '',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: any): void => {
-    const { name, value } = e
+    const {name, value} = e;
     setValues({
       ...values,
       [name]: value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (): void => {
-    console.log('handleSubmit isSubmitting is ', isSubmitting)
-    setErrors(validate(values))
-    setIsSubmitting(true)
-  }
+    console.log('handleSubmit isSubmitting is ', isSubmitting);
+    setErrors(validate(values));
+    setIsSubmitting(true);
+  };
 
   useEffect(() => {
     if (
@@ -32,12 +33,12 @@ const useValidatorForm = (validationSuccessfull: any, validate: any): any => {
       errors.password.length === 0 &&
       isSubmitting
     ) {
-      console.log('validationSuccessfull is called')
-      validationSuccessfull()
+      console.log('validationSuccessfull is called');
+      validationSuccessfull();
     }
-  }, [errors])
+  }, [errors]);
 
-  return { handleChange, handleSubmit, values, errors }
-}
+  return {handleChange, handleSubmit, values, errors};
+};
 
-export default useValidatorForm
+export default useValidatorForm;

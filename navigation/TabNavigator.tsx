@@ -15,10 +15,10 @@ const TabNavigator = (): JSX.Element => {
 
   return (
     <>
-      <SafeAreaView style={{flex: 0, backgroundColor: Colors.primary}} />
-      <SafeAreaView style={{flex: 1, backgroundColor: Colors.primary}}>
+      <SafeAreaView style={styles.safeAreaTop} />
+      <SafeAreaView style={styles.safeAreaBottom}>
         <Tab.Navigator
-          screenOptions={({route}) => ({
+          screenOptions={({}) => ({
             tabBarActiveTintColor: Colors.lightTheme,
             // tabBarActiveBackgroundColor: Colors.button,
             // tabBarInactiveTintColor: Colors.white,
@@ -29,7 +29,7 @@ const TabNavigator = (): JSX.Element => {
             name="HomeTab"
             component={HomeNavigator}
             options={{
-              tabBarLabel: ({focused}) => <Text style={styles.labelStyle}>Home</Text>,
+              tabBarLabel: ({}) => <Text style={styles.labelStyle}>Home</Text>,
               tabBarIcon: ({focused}) => (
                 <Image
                   source={focused ? Images.homeSelected : Images.home}
@@ -42,7 +42,9 @@ const TabNavigator = (): JSX.Element => {
             name="SearchTab"
             component={SearchScreen}
             options={{
-              tabBarLabel: ({focused}) => <Text style={styles.labelStyle}>Search</Text>,
+              tabBarLabel: ({}) => (
+                <Text style={styles.labelStyle}>Search</Text>
+              ),
               tabBarIcon: ({focused}) => (
                 <Image
                   source={focused ? Images.searchSelected : Images.search}
@@ -68,7 +70,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '200',
     letterSpacing: 1,
-  }
+  },
+  safeAreaTop: {flex: 0, backgroundColor: Colors.primary},
+  safeAreaBottom: {flex: 1, backgroundColor: Colors.white},
 });
 
 export default TabNavigator;

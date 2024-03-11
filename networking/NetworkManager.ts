@@ -1,4 +1,4 @@
-const NetworkManager = async <T>(
+const NetworkManager = async (
   lister: (data: any) => void,
   endPoint: string,
   method: string,
@@ -6,13 +6,11 @@ const NetworkManager = async <T>(
   let baseURL = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
   try {
-    
     const response = await fetch(baseURL + endPoint, {
-      method: method
+      method: method,
     });
 
     if (response !== undefined) {
-
       if (response?.status === 200) {
         const data = await response.json();
 

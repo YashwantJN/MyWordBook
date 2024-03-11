@@ -1,35 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {Colors} from '../../constants/Colors.constant';
 import PrimaryButton from '../../components/button/PrimaryButton';
 import Images from '../../constants/Images.constant';
-import { User, useAuth } from '../../../context/Auth.context';
-import { AsyncStorageService } from '../../services/AsyncStorageService';
+import {User} from '../../../context/Auth.context';
+import {AsyncStorageService} from '../../services/AsyncStorageService';
 
-const WelcomeScreen = ({navigation}) => {
-
+const WelcomeScreen = ({navigation}: {navigation: any}) => {
   const [user, setUser] = useState<User>({email: '', password: ''});
 
   useEffect(() => {
-    checkUserAuthentication().then((res) => {
-      if(res !== undefined) {
+    checkUserAuthentication().then(res => {
+      if (res !== undefined) {
         setUser(res);
       }
     });
   }, []);
 
   async function checkUserAuthentication(): Promise<User | undefined> {
-    const user = await AsyncStorageService.getData('userData');
-    if(user.email && user.password) {
-      return user
+    const userData: User = await AsyncStorageService.getData('userData');
+    if (userData.email && userData.password) {
+      return userData;
     }
-    return undefined
+    return undefined;
   }
 
   const navigateToRegister = () => {
     navigation.navigate('Login', {
-      user: user
-    })
+      user: user,
+    });
   };
 
   return (

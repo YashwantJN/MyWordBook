@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   KeyboardAvoidingView,
   Pressable,
   ScrollView,
   Text,
   useWindowDimensions,
-  View
+  View,
 } from 'react-native';
-import { useAuth, User } from '../../../context/Auth.context';
+import {useAuth, User} from '../../../context/Auth.context';
 import Form from '../../components/card/Form';
 import validate from './hooks/useValidationInfo';
 import useValidatorForm from './hooks/useValidatorForm';
-import { styles } from './styles/styles';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import {styles} from './styles/styles';
+import {RouteProp, useRoute} from '@react-navigation/native';
 import Loader from '../../components/loader/Loader';
 
 interface LoginScreenProps {
@@ -28,10 +28,10 @@ const LoginScreen = (): JSX.Element => {
   const route = useRoute<LoginScreenRouteProp>();
 
   const submitLoginRequest = (): void => {
-    submitLoginApiRequest()
+    submitLoginApiRequest();
   };
 
-  const { handleChange, handleSubmit, values, errors } = useValidatorForm(
+  const {handleChange, handleSubmit, values, errors} = useValidatorForm(
     submitLoginRequest,
     validate,
   );
@@ -39,33 +39,31 @@ const LoginScreen = (): JSX.Element => {
   const auth = useAuth();
   const height = useWindowDimensions().height;
 
-  useEffect(() => { 
-    if(route.params.user?.email !== '') {
-      inputValueHandler(route.params.user?.email!, 'email')
+  useEffect(() => {
+    if (route.params.user?.email !== '') {
+      inputValueHandler(route.params.user?.email!, 'email');
     }
-  }, []);
-
+  });
 
   function didPressedForGotPassword(): void {
     console.log('Forgot Password');
-    
   }
 
   function submitLoginApiRequest(): void {
-      setAuthenticating(true)
-      setTimeout(() => {
-        setAuthenticating(false)
-        auth.authenticate(values);
-      }, 2000);
+    setAuthenticating(true);
+    setTimeout(() => {
+      setAuthenticating(false);
+      auth.authenticate(values);
+    }, 2000);
   }
 
   function inputValueHandler(value: string, identifier: string): void {
     switch (identifier) {
       case 'email':
-        handleChange({ name: 'email', value });
+        handleChange({name: 'email', value});
         break;
       case 'password':
-        handleChange({ name: 'password', value });
+        handleChange({name: 'password', value});
         break;
     }
   }
@@ -84,7 +82,7 @@ const LoginScreen = (): JSX.Element => {
       textInput: values.password,
       isSecuredField: true,
       error: errors.password,
-    }
+    },
   ];
   const formButton = {
     title: 'Submit',
@@ -107,8 +105,8 @@ const LoginScreen = (): JSX.Element => {
         enabled
         behavior="height"
         style={styles.styleContainer}>
-        <View style={{ height, justifyContent: 'center'}}>
-        <Text style={styles.textSignIn}>Authenticate Here!</Text>
+        <View style={{height, justifyContent: 'center'}}>
+          <Text style={styles.textSignIn}>Authenticate Here!</Text>
           <Form {...formProps} />
           <View style={styles.forgotPassBtnContainer}>
             <Pressable
@@ -119,7 +117,7 @@ const LoginScreen = (): JSX.Element => {
               </Text>
             </Pressable>
           </View>
-          <Loader isLoading={authenticating} text='Validating...'/>
+          <Loader isLoading={authenticating} text="Validating..." />
         </View>
       </KeyboardAvoidingView>
     </ScrollView>

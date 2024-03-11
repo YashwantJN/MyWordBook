@@ -1,9 +1,8 @@
-import { NavigationContainer } from '@react-navigation/native';
-import React, { useEffect } from 'react';
-import { User, useAuth } from '../context/Auth.context';
+import {NavigationContainer} from '@react-navigation/native';
+import React from 'react';
+import {useAuth} from '../context/Auth.context';
 import AuthNavigator from './AuthNavigator';
 import TabNavigator from './TabNavigator';
-import { AsyncStorageService } from '../src/services/AsyncStorageService';
 
 export const RootNavigators = (): JSX.Element => {
   const auth = useAuth();

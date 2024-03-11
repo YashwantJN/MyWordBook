@@ -1,6 +1,6 @@
 import React from 'react';
-import {TouchableOpacity, Text, TextStyle, StyleSheet} from 'react-native';
-import { Colors } from '../../constants/Colors.constant';
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {Colors} from '../../constants/Colors.constant';
 
 interface PrimaryButtonProps {
   title: string;
@@ -9,7 +9,7 @@ interface PrimaryButtonProps {
   marginTop?: number;
   disabled?: boolean;
   width?: number | string; // use for small views like 'pop-ups'
-  popTextSize?:number
+  popTextSize?: number;
 }
 
 const PrimaryButton = ({
@@ -17,9 +17,8 @@ const PrimaryButton = ({
   onPress,
   marginTop = 24,
   disabled = false,
-  width = '100%'
+  width = '100%',
 }: PrimaryButtonProps): React.JSX.Element => {
- 
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -38,24 +37,24 @@ const PrimaryButton = ({
 };
 
 const styles = StyleSheet.create({
-    primaryButtonViewStyle: {
-      paddingVertical: 14,
-      paddingHorizontal: 32,
-      borderRadius: 36,
-      alignItems: 'center',
-      justifyContent: 'center',
-      alignSelf: 'center',
-      backgroundColor: Colors.button,
-      borderWidth: 2,
-      borderColor: Colors.border
-    },
-    primaryButtonTextStyle: {
-      fontSize: 18,
-      fontWeight: '600',
-      textAlign: 'center',
-      color: Colors.darkTheme,
-      letterSpacing: 2
-    },
-  });
+  primaryButtonViewStyle: {
+    paddingVertical: 14,
+    paddingHorizontal: 32,
+    borderRadius: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    backgroundColor: Colors.button,
+    borderWidth: 2,
+    borderColor: Colors.border,
+  },
+  primaryButtonTextStyle: {
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
+    color: Colors.darkTheme,
+    letterSpacing: 2,
+  },
+});
 
 export default PrimaryButton;

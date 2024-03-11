@@ -1,4 +1,3 @@
-/* eslint-disable n/handle-callback-err */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export class AsyncStorageService {
@@ -11,7 +10,9 @@ export class AsyncStorageService {
   static async getData(key: string): Promise<any> {
     try {
       const result = await AsyncStorage.getItem(key);
-      if (result != null) return JSON.parse(result);
+      if (result != null) {
+        return JSON.parse(result);
+      }
     } catch (error) {
       return undefined;
     }
@@ -25,7 +26,10 @@ export class AsyncStorageService {
 
   static removeAllAsyncData(): void {
     AsyncStorage.clear().catch(error => {
-      console.error('[error] failed to remove all items from async storage: ', error);
+      console.error(
+        '[error] failed to remove all items from async storage: ',
+        error,
+      );
     });
   }
 }

@@ -1,15 +1,15 @@
-import React, { type FC } from 'react'
+import React, {type FC} from 'react';
 import {
   Pressable,
   Text,
   TextInput,
   useWindowDimensions,
   View,
-} from 'react-native'
-import { formStyle } from './styles'
+} from 'react-native';
+import {formStyle} from './styles';
 
 const Form: FC<any> = props => {
-  const height = useWindowDimensions().height
+  const height = useWindowDimensions().height;
   return (
     <View
       style={
@@ -24,7 +24,9 @@ const Form: FC<any> = props => {
               <Text style={formStyle().textLabel}>{item.label}</Text>
               <TextInput
                 style={formStyle().textInput}
-                onChangeText={value => { props.inputValueHandler(value, item.id) }}
+                onChangeText={value => {
+                  props.inputValueHandler(value, item.id);
+                }}
                 value={item.textInput}
                 autoCapitalize="none"
                 autoCorrect={false}
@@ -36,14 +38,12 @@ const Form: FC<any> = props => {
                 placeholderTextColor={'gray'}
               />
               <View style={formStyle().errorMessageContainer}>
-                {(item.error !== '')
-                  ? (
-                    <Text style={formStyle().errorMessage}>{item.error}</Text>
-                  )
-                  : null}
+                {item.error !== '' ? (
+                  <Text style={formStyle().errorMessage}>{item.error}</Text>
+                ) : null}
               </View>
             </View>
-          )
+          );
         })}
         <View style={formStyle().submitBtnContainer}>
           <Pressable
@@ -56,7 +56,7 @@ const Form: FC<any> = props => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

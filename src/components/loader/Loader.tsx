@@ -1,11 +1,10 @@
-
-import React from 'react'
-import { ActivityIndicator, Modal, StyleSheet, Text, View } from 'react-native'
-import { Colors } from '../../constants/Colors.constant'
+import React from 'react';
+import {ActivityIndicator, Modal, StyleSheet, Text, View} from 'react-native';
+import {Colors} from '../../constants/Colors.constant';
 
 interface LoaderProps {
-  isLoading: boolean,
-    text?: string
+  isLoading: boolean;
+  text?: string;
 }
 
 const Loader = (props: LoaderProps): JSX.Element => {
@@ -16,7 +15,7 @@ const Loader = (props: LoaderProps): JSX.Element => {
       visible={props.isLoading}
       style={styles.modalStyle}
       statusBarTranslucent
-      onRequestClose={() => { }}>
+      onRequestClose={() => {}}>
       <View style={styles.modalBackground}>
         <View style={styles.activityIndicatorWrapper}>
           <ActivityIndicator
@@ -28,8 +27,8 @@ const Loader = (props: LoaderProps): JSX.Element => {
         </View>
       </View>
     </Modal>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   modalStyle: {
@@ -57,6 +56,6 @@ const styles = StyleSheet.create({
     color: Colors.primary,
     paddingTop: 10,
   },
-})
+});
 
-export default Loader
+export default Loader;

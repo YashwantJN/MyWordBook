@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Modal,
-  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -15,33 +14,42 @@ import {Colors} from '../../constants/Colors.constant';
 import NavigationItem from '../../components/items/NavigationItem';
 import Loader from '../../components/loader/Loader';
 
-const SearchScreen = ({navigation}) => {
+const SearchScreen = ({navigation}: {navigation: any}) => {
   const [answer, onChangeAnswer] = useState('');
   const [wordNotFound, setWordNotFound] = useState(false);
   const [wordsList, setWordsList] = useState([]);
   const [searching, setSearching] = useState(false);
 
-  function navigateToInfo(word:any) {
+  function navigateToInfo(word: any) {
     console.log('wordData', word);
-    
-    navigation.navigate('Info', {info: {
-      word: word.word,
-      definition: word?.meanings[0]?.definitions[0]?.definition,
-      phonetics: word.phonetics[0]?.audio,
-    }})
+
+    navigation.navigate('Info', {
+      info: {
+        word: word.word,
+        definition: word?.meanings[0]?.definitions[0]?.definition,
+        phonetics: word.phonetics[0]?.audio,
+      },
+    });
   }
 
   function onChangeText(enteredText: string): void {
     onChangeAnswer(enteredText);
   }
 
+  useEffect(() => {
+    // on load
+    return () => {
+      // on unmount
+    };
+  }, []);
+
   async function onPressSearch() {
     onChangeAnswer('');
     setWordsList([]);
-    setSearching(true)
+    setSearching(true);
     await NetworkManager(
       (response: any) => {
-        setSearching(false)
+        setSearching(false);
         if (response === 'not found') {
           setWordNotFound(true);
         } else {
@@ -56,33 +64,11 @@ const SearchScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Modal transparent visible={wordNotFound} animationType="slide">
-        <View
-          style={{
-            width: '100%',
-            height: '30%',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: Colors.button,
-          }}>
-          <Text style={{color: 'black', fontSize: 25, padding: 5}}>
-            Not Found
-          </Text>
-          <Text
-            style={{
-              color: 'black',
-              fontSize: 10,
-              fontWeight: '200',
-              padding: 5,
-            }}>
-            Please enter valid word
-          </Text>
+        <View style={styles.modalView}>
+          <Text style={styles.text}>Not Found</Text>
+          <Text style={styles.description}>Please enter valid word</Text>
           <TouchableOpacity
-            style={{
-              backgroundColor: 'red',
-              paddingHorizontal: 75,
-              paddingVertical: 10,
-              borderRadius: 5,
-            }}
+            style={styles.button}
             onPressOut={() => {
               setWordNotFound(false);
             }}>
@@ -108,21 +94,21 @@ const SearchScreen = ({navigation}) => {
         <PrimaryButton title="Search" onPress={onPressSearch} />
       </View>
       <ScrollView>
-        {wordsList.map((word: any) => {
+        {wordsList?.map((word: any) => {
           return (
             <View key={Math.random()}>
               <NavigationItem
                 title={word?.word}
                 description={word?.meanings[0]?.definitions[0]?.definition}
                 onPress={() => {
-                  navigateToInfo(word)
+                  navigateToInfo(word);
                 }}
               />
             </View>
           );
         })}
       </ScrollView>
-      <Loader isLoading={searching} text='Searching...'/>
+      <Loader isLoading={searching} text="Searching..." />
     </View>
   );
 };
@@ -131,6 +117,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+  },
+  modalView: {
+    width: '100%',
+    height: '30%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Colors.button,
+  },
+  text: {color: 'black', fontSize: 25, padding: 5},
+  description: {
+    color: 'black',
+    fontSize: 10,
+    fontWeight: '200',
+    padding: 5,
+  },
+  button: {
+    backgroundColor: 'red',
+    paddingHorizontal: 75,
+    paddingVertical: 10,
+    borderRadius: 5,
   },
   searchView: {
     flex: 1,
