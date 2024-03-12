@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`app renders correctly 1`] = `
+exports[`App Module app renders correctly for un-auth 1`] = `
 Array [
   <RCTSafeAreaView
     style={
@@ -13,7 +13,7 @@ Array [
   <RCTSafeAreaView
     style={
       Object {
-        "backgroundColor": "#183d3d",
+        "backgroundColor": "#FFFFFF",
         "flex": 1,
       }
     }
@@ -195,6 +195,7 @@ Array [
                       "width": "100%",
                     }
                   }
+                  testID="primaryButton"
                 >
                   <Text
                     style={

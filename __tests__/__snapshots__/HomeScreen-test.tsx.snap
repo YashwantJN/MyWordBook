@@ -1,0 +1,1007 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen home renders correctly 1`] = `
+<RCTScrollView
+  ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
+  data={
+    Array [
+      Object {
+        "definition": "A step-by-step procedure for solving a problem or accomplishing a task.",
+        "pronunciation": "Eksaktor",
+        "word": "Algorithm",
+      },
+      Object {
+        "definition": "A data structure that contains a group of elements. Typically these elements are all of the same data type, such as an integer or string.",
+        "pronunciation": "Eksaktor",
+        "word": "Array",
+      },
+      Object {
+        "definition": "An error, flaw or fault in a computer program that causes it to produce an incorrect or unexpected result, or to behave in unintended ways.",
+        "pronunciation": "Eksaktor",
+        "word": "Bug",
+      },
+      Object {
+        "definition": " A software that translates computer code written in one programming language (the source language) into another language (the target language).",
+        "pronunciation": "Eksaktor",
+        "word": "Compiler",
+      },
+      Object {
+        "definition": "An organized collection of data, generally stored and accessed electronically from a computer system.",
+        "pronunciation": "Eksaktor",
+        "word": "Database",
+      },
+      Object {
+        "definition": "A block of organized, reusable code that is used to perform a single, related action.",
+        "pronunciation": "Eksaktor",
+        "word": "Function",
+      },
+      Object {
+        "definition": "A programming construct that repeats a group of commands.",
+        "pronunciation": "Eksaktor",
+        "word": "Loop",
+      },
+      Object {
+        "definition": " In object-oriented programming, it is an instance of a class. It has both data and functions.",
+        "pronunciation": "Eksaktor",
+        "word": "Object",
+      },
+      Object {
+        "definition": "A storage location paired with an associated symbolic name, which contains some known or unknown quantity of information referred to as a value.",
+        "pronunciation": "Eksaktor",
+        "word": "Variable",
+      },
+      Object {
+        "definition": "A set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it.",
+        "pronunciation": "Eksaktor",
+        "word": "API",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  indicatorStyle="black"
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  showsVerticalScrollIndicator={true}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "padding": 16,
+    }
+  }
+  viewabilityConfigCallbackPairs={Array []}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+    >
+      <Text
+        style={
+          Object {
+            "color": "#183d3d",
+            "fontSize": 28,
+            "fontWeight": "500",
+            "letterSpacing": 1,
+            "textAlign": "center",
+          }
+        }
+      >
+        Choose to know more!
+      </Text>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Algorithm
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                A step-by-step procedure for solving a problem or accomplishing a task.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Array
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                A data structure that contains a group of elements. Typically these elements are all of the same data type, such as an integer or string.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Bug
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                An error, flaw or fault in a computer program that causes it to produce an incorrect or unexpected result, or to behave in unintended ways.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Compiler
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                 A software that translates computer code written in one programming language (the source language) into another language (the target language).
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Database
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                An organized collection of data, generally stored and accessed electronically from a computer system.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Function
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                A block of organized, reusable code that is used to perform a single, related action.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Loop
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                A programming construct that repeats a group of commands.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Object
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                 In object-oriented programming, it is an instance of a class. It has both data and functions.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Variable
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                A storage location paired with an associated symbolic name, which contains some known or unknown quantity of information referred to as a value.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#ccc",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "margin": 10,
+              "padding": 15,
+            }
+          }
+          testID="NavigationItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#183d3d",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                API
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                A set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it.
+              </Text>
+            </View>
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/arrow.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 20,
+                  "resizeMode": "contain",
+                  "width": 20,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 50,
+            "padding": 16,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          You reached the end
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
