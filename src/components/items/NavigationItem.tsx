@@ -5,7 +5,10 @@ import {Colors} from '../../constants/Colors.constant';
 
 const NavigationItem = ({title, description, onPress}) => {
   return (
-    <Pressable style={styles.container} onPress={onPress}>
+    <Pressable
+      style={styles.container}
+      onPress={onPress}
+      testID="NavigationItem">
       <View style={styles.contentContainer}>
         <View style={styles.textContainer}>
           <Text style={styles.title}>{title}</Text>

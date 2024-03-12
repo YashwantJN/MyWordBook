@@ -21,6 +21,7 @@ const PrimaryButton = ({
 }: PrimaryButtonProps): React.JSX.Element => {
   return (
     <TouchableOpacity
+      testID="primaryButton"
       disabled={disabled}
       onPress={onPress}
       activeOpacity={0.7}

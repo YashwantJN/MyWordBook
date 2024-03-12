@@ -8,7 +8,6 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
   // https://random-words-api.vercel.app/word
 
   const navigateToInfo = (wordData: any) => {
-    console.log('wordData', wordData);
     navigation.navigate('Info', {info: wordData});
   };
 

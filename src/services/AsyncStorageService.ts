@@ -2,9 +2,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export class AsyncStorageService {
   static saveData(data: any, key: string): void {
-    AsyncStorage.setItem(key, JSON.stringify(data)).catch(() => {
-      console.log(`[error] failed to set item in async storage: ${key}`);
-    });
+    AsyncStorage.setItem(key, JSON.stringify(data));
+    // .catch(() => {
+    //   console.log(`[error] failed to set item in async storage: ${key}`);
+    // });
   }
 
   static async getData(key: string): Promise<any> {
@@ -19,17 +20,19 @@ export class AsyncStorageService {
   }
 
   static deleteData(key: string): void {
-    AsyncStorage.removeItem(key).catch(() => {
-      console.error('[error] failed to delete item from async storage:', key);
-    });
+    AsyncStorage.removeItem(key);
+    // .catch(() => {
+    //   console.error('[error] failed to delete item from async storage:', key);
+    // });
   }
 
   static removeAllAsyncData(): void {
-    AsyncStorage.clear().catch(error => {
-      console.error(
-        '[error] failed to remove all items from async storage: ',
-        error,
-      );
-    });
+    AsyncStorage.clear();
+    // .catch(error => {
+    //   console.error(
+    //     '[error] failed to remove all items from async storage: ',
+    //     error,
+    //   );
+    // });
   }
 }

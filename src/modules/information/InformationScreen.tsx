@@ -1,7 +1,7 @@
 import {RouteProp, useRoute} from '@react-navigation/native';
 import React from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
-import Sound from 'react-native-sound';
+import {useAudio} from './audio/useAudio';
 
 interface InformationScreenProps {
   info?: any;
@@ -13,16 +13,7 @@ type InformationScreenRouteProp = RouteProp<{
 
 const InformationScreen = () => {
   const route = useRoute<InformationScreenRouteProp>();
-
-  const playAudio = (url: string) => {
-    const sound = new Sound(url, null, error => {
-      if (error) {
-        console.error('Error loading sound:', error);
-      } else {
-        sound.play();
-      }
-    });
-  };
+  const {playAudio} = useAudio();
 
   return (
     <View style={styles.container}>
@@ -30,6 +21,7 @@ const InformationScreen = () => {
       <Text style={styles.description}>{route.params?.info.definition}</Text>
       {route.params?.info?.phonetics !== undefined && (
         <Button
+          testID="PlayButton"
           title="Hear phonetics"
           onPress={() => {
             playAudio(route.params?.info.phonetics);

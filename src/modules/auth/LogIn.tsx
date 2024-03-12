@@ -43,7 +43,7 @@ const LoginScreen = (): JSX.Element => {
     if (route.params.user?.email !== '') {
       inputValueHandler(route.params.user?.email!, 'email');
     }
-  });
+  }, []);
 
   function didPressedForGotPassword(): void {
     console.log('Forgot Password');

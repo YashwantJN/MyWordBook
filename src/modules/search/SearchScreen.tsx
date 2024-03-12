@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {
   Modal,
-  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -10,9 +9,9 @@ import {
 } from 'react-native';
 import {NetworkManager} from '../../../networking/NetworkManager';
 import PrimaryButton from '../../components/button/PrimaryButton';
-import {Colors} from '../../constants/Colors.constant';
-import NavigationItem from '../../components/items/NavigationItem';
 import Loader from '../../components/loader/Loader';
+import {Colors} from '../../constants/Colors.constant';
+import WordsList from './WordsList';
 
 const SearchScreen = ({navigation}: {navigation: any}) => {
   const [answer, onChangeAnswer] = useState('');
@@ -21,8 +20,6 @@ const SearchScreen = ({navigation}: {navigation: any}) => {
   const [searching, setSearching] = useState(false);
 
   function navigateToInfo(word: any) {
-    console.log('wordData', word);
-
     navigation.navigate('Info', {
       info: {
         word: word.word,
@@ -35,13 +32,6 @@ const SearchScreen = ({navigation}: {navigation: any}) => {
   function onChangeText(enteredText: string): void {
     onChangeAnswer(enteredText);
   }
-
-  useEffect(() => {
-    // on load
-    return () => {
-      // on unmount
-    };
-  }, []);
 
   async function onPressSearch() {
     onChangeAnswer('');
@@ -93,21 +83,7 @@ const SearchScreen = ({navigation}: {navigation: any}) => {
         />
         <PrimaryButton title="Search" onPress={onPressSearch} />
       </View>
-      <ScrollView>
-        {wordsList?.map((word: any) => {
-          return (
-            <View key={Math.random()}>
-              <NavigationItem
-                title={word?.word}
-                description={word?.meanings[0]?.definitions[0]?.definition}
-                onPress={() => {
-                  navigateToInfo(word);
-                }}
-              />
-            </View>
-          );
-        })}
-      </ScrollView>
+      <WordsList wordsList={wordsList} navigateToInfo={navigateToInfo} />
       <Loader isLoading={searching} text="Searching..." />
     </View>
   );
