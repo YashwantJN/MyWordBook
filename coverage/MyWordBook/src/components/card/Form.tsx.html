@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -135,23 +135,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -186,34 +187,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { type FC } from 'react'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {type FC} from 'react';
 import {
   Pressable,
   Text,
   TextInput,
   useWindowDimensions,
   View,
-} from 'react-native'
-import { formStyle } from './styles'
+} from 'react-native';
+import {formStyle} from './styles';
 &nbsp;
-const Form: FC&lt;any&gt; = <span class="fstat-no" title="function not covered" >pr</span>ops =&gt; {
-  const height = <span class="cstat-no" title="statement not covered" >useWindowDimensions().height</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+const Form: FC&lt;any&gt; = props =&gt; {
+  const height = useWindowDimensions().height;
+  return (
     &lt;View
       style={
         formStyle(
-          Object.keys(props.cardElemets).length * (height &lt; 800 ? 180 : 200),
+          Object.keys(props.cardElemets).length * (height &lt; 800 ? <span class="branch-0 cbranch-no" title="branch not covered" >180 </span>: 200),
         ).containerCardView
       }&gt;
       &lt;View style={[formStyle().cardView]}&gt;
-        {Object.values(props.cardElemets).map(<span class="fstat-no" title="function not covered" >(i</span>tem: any) =&gt; {
-<span class="cstat-no" title="statement not covered" >          return (</span>
+        {Object.values(props.cardElemets).map((item: any) =&gt; {
+          return (
             &lt;View key={item.id}&gt;
               &lt;Text style={formStyle().textLabel}&gt;{item.label}&lt;/Text&gt;
               &lt;TextInput
                 style={formStyle().textInput}
-                onChangeText={<span class="fstat-no" title="function not covered" >va</span>lue =&gt; { <span class="cstat-no" title="statement not covered" >props.inputValueHandler(value, item.id) </span>}}
+                onChangeText={<span class="fstat-no" title="function not covered" >va</span>lue =&gt; {
+<span class="cstat-no" title="statement not covered" >                  props.inputValueHandler(value, item.id);</span>
+                }}
                 value={item.textInput}
                 autoCapitalize="none"
                 autoCorrect={false}
@@ -225,14 +227,12 @@ const Form: FC&lt;any&gt; = <span class="fstat-no" title="function not covered" 
                 placeholderTextColor={'gray'}
               /&gt;
               &lt;View style={formStyle().errorMessageContainer}&gt;
-                {(item.error !== '')
-                  ? (
-                    &lt;Text style={formStyle().errorMessage}&gt;{item.error}&lt;/Text&gt;
-                  )
-                  : null}
+                {item.error !== '' ? (
+<span class="branch-0 cbranch-no" title="branch not covered" >                  &lt;Text style={formStyle().errorMessage}&gt;{item.error}&lt;/Text&gt;</span>
+                ) : null}
               &lt;/View&gt;
             &lt;/View&gt;
-          )
+          );
         })}
         &lt;View style={formStyle().submitBtnContainer}&gt;
           &lt;Pressable
@@ -245,10 +245,10 @@ const Form: FC&lt;any&gt; = <span class="fstat-no" title="function not covered" 
         &lt;/View&gt;
       &lt;/View&gt;
     &lt;/View&gt;
-  )
-}
+  );
+};
 &nbsp;
-export default Form
+export default Form;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -256,7 +256,7 @@ export default Form
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-03-04T12:54:48.419Z
+                at 2024-03-12T13:19:04.487Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
